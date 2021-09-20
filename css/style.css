@@ -1,0 +1,266 @@
+:root {
+    --color1: #495867;
+    --color2: #577399;
+    --color2-trans: #577399dc;
+    --color3: #BDD5EA;
+    --color4: #f7f7ff;
+    --color5: #fe5f55;
+    --fuentePrincipal: 'Open Sans', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+*,*:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--color4);
+    font-family: var(--fuentePrincipal);
+    line-height: 2;
+    text-emphasis-color: var(--color5);
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
+}
+
+/* Globales */
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+h1::selection, h2::selection, h3::selection, a::selection {
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+p::selection {
+    background-color: var(--color5);
+    color: var(--color4);
+}
+
+i::selection {
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+/* Nav */
+
+.nav-bar {
+    position: fixed;
+    height: 7rem;
+    width: 100%;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem 0 1.5rem;
+    border-bottom: .5rem solid var(--color5);
+    z-index: 1000;
+}
+
+.logo-text {
+    color: var(--color4);
+    font-weight: 300;
+}
+
+.logo-text__bold {
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 7rem;
+    background: var(--color5);
+}
+
+.nav-menu__active {
+    display: flex;
+}
+
+.nav-menu__inactive {
+    display: none;
+}
+
+.nav-burger {
+    cursor: pointer;
+}
+
+.nav-cross {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-cross__active {
+    display: flex;
+}
+
+.nav-cross__inactive {
+    display: none;
+}
+
+.nav-burger__active {
+    display: flex;
+}
+
+.nav-burger__inactive {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        flex-direction: row;
+        position: relative;
+        background: var(--color1);
+        color: var(--color4);
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        top: 0;
+        line-height: 0;
+    }
+
+    .nav-burger {
+        display: none;
+    }
+
+    .nav-cross {
+        display: none;
+    }
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.8rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0 1rem 0;
+}
+
+.nav-item:hover {
+    font-size: 1.8rem;
+    background-color: var(--color1);
+}
+
+@media (min-width: 768px) {
+    .nav-item:hover {
+        background-color: transparent;
+    }
+
+    .nav-item {
+        list-style: none;
+        font-size: 1.8rem;
+        width: auto;
+        height: auto;
+        padding: 1rem 0 1rem 0;
+    }
+}
+
+.nav-link {
+    color: var(--color4);
+}
+
+
+@media (min-width: 768px) {
+    .nav-link:hover {
+        color: var(--color5);
+        transition: .3s;
+    }
+}
+
+.burger-line {
+    font-size: 3rem;
+    color: var(--color4);
+}
+
+.cross {
+    font-size: 3rem;
+    color: var(--color4);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 7rem;
+    background-image: url(../assets/Hero-build-1.jpg);
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    color: var(--color4);
+    background-color: var(--color2-trans);
+    height: 100%;
+    width: 100%;
+}
+
+.hero-container h2 {
+    font-size: 4.5rem;
+}
+.hero-container .palabras {
+    color: var(--color3);
+}
+
+.hero-container p {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.section-container {
+    height: 100vh;
+}
+
+.section-container h2 {
+    color: var(--color5);
+}
+
+.section-container p {
+    text-align: justify;
+    color: var(--color1);
+}
+
+.container-nosotros {
+    padding: 12rem 4rem;
+    background-color: var(--color4);
+    height: 100%;
+
+}
